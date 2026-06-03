@@ -245,23 +245,29 @@ mark {
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 180ms ease;
 }
 
 .person:hover,
 .offer-row:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.05);
+  z-index: 10;
 }
 
-.person-one { left: 0; top: 116px; width: 118px; height: 118px; }
-.person-two { left: 118px; top: 88px; width: 106px; height: 106px; }
-.person-three { left: 325px; top: 0; width: 132px; height: 132px; }
-.person-four { left: 435px; top: 138px; width: 116px; height: 116px; }
-.person-five { left: 620px; top: 38px; width: 122px; height: 122px; }
-.person-six { right: 285px; top: 88px; width: 114px; height: 114px; }
-.person-seven { right: 110px; top: 0; width: 132px; height: 132px; }
-.person-eight { right: 0; top: 108px; width: 112px; height: 112px; }
+.person-one { left: 0%; top: 40px; width: 110px; height: 110px; animation: float 6s ease-in-out infinite 0s; }
+.person-two { left: 12%; top: 160px; width: 120px; height: 120px; animation: float 5.5s ease-in-out infinite 0.5s; }
+.person-three { left: 26%; top: 10px; width: 130px; height: 130px; animation: float 6s ease-in-out infinite 1s; }
+.person-four { left: 38%; top: 180px; width: 120px; height: 120px; animation: float 6.5s ease-in-out infinite 1.5s; }
+.person-five { left: 52%; top: 30px; width: 110px; height: 110px; animation: float 5s ease-in-out infinite 0.2s; }
+.person-six { right: 26%; top: 190px; width: 135px; height: 135px; animation: float 6s ease-in-out infinite 0.8s; }
+.person-seven { right: 12%; top: 20px; width: 125px; height: 125px; animation: float 5.5s ease-in-out infinite 1.2s; }
+.person-eight { right: 0%; top: 140px; width: 115px; height: 115px; animation: float 6s ease-in-out infinite 0.4s; }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
 
 .story-section {
   position: relative;
@@ -389,6 +395,47 @@ mark {
 .triangle-two {
   right: 12px;
   bottom: -12px;
+}
+
+/* Custom orbit bottom styling for the cutout effect */
+.orbit-bottom {
+  background: var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 18px 45px rgba(12, 32, 26, 0.12);
+  overflow: hidden; /* clip inner image to circle */
+}
+
+.orbit-bottom img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+/* Triangle positions specifically for orbit-bottom */
+.orbit-bottom .triangle-one {
+  left: -20px;
+  top: -20px;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+.orbit-bottom .triangle-two {
+  right: -20px;
+  top: 45%;
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+.orbit-bottom .triangle-three {
+  left: 45%;
+  bottom: -40px;
+  transform: rotate(5deg);
+  z-index: 2;
 }
 
 .offer-section {
@@ -530,16 +577,15 @@ blockquote p {
   position: absolute;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-.face-a { left: 0; top: 64px; width: 72px; height: 72px; }
-.face-b { left: 88px; top: 230px; width: 126px; height: 126px; }
-.face-c { left: -46px; top: 300px; width: 58px; height: 58px; }
-.face-d { left: 28px; bottom: 32px; width: 46px; height: 46px; }
-.face-e { right: 0; top: 68px; width: 76px; height: 76px; }
-.face-f { right: 96px; top: 150px; width: 72px; height: 72px; }
-.face-g { right: 42px; bottom: 10px; width: 162px; height: 162px; }
+.face-a { left: -10%; top: 64px; width: 72px; height: 72px; animation: float 5s ease-in-out infinite 0.1s; }
+.face-b { left: 2%; top: 230px; width: 126px; height: 126px; animation: float 6s ease-in-out infinite 0.4s; }
+.face-c { left: -14%; top: 380px; width: 58px; height: 58px; animation: float 5.5s ease-in-out infinite 0.7s; }
+.face-d { left: 18%; bottom: -40px; width: 66px; height: 66px; animation: float 6.5s ease-in-out infinite 0.3s; }
+.face-e { right: -5%; top: 48px; width: 76px; height: 76px; animation: float 5s ease-in-out infinite 0.8s; }
+.face-f { right: 8%; top: 180px; width: 72px; height: 72px; animation: float 6s ease-in-out infinite 0.2s; }
+.face-g { right: -12%; bottom: -10px; width: 162px; height: 162px; animation: float 5.5s ease-in-out infinite 0.5s; }
 
 .newsletter-footer {
   overflow: hidden;
@@ -595,8 +641,8 @@ blockquote p {
 }
 
 .footer-purple {
-  right: 2%;
-  top: 110px;
+  right: -20px;
+  top: 90px;
 }
 
 .footer-divider {
@@ -714,14 +760,14 @@ blockquote p {
     max-width: 620px;
   }
 
-  .person-one { left: 0; top: 168px; }
-  .person-two { left: 14%; top: 80px; }
-  .person-three { left: 36%; top: 0; }
-  .person-four { left: 34%; top: 176px; }
-  .person-five { left: 58%; top: 78px; }
-  .person-six { right: 7%; top: 176px; }
-  .person-seven { right: 13%; top: 0; }
-  .person-eight { right: 0; top: 104px; }
+  .person-one { left: 0; top: 60px; }
+  .person-two { left: 14%; top: 180px; }
+  .person-three { left: 28%; top: 40px; }
+  .person-four { left: 42%; top: 180px; left: auto; }
+  .person-five { left: 56%; top: 40px; left: auto; }
+  .person-six { right: 28%; top: 180px; left: auto; }
+  .person-seven { right: 14%; top: 60px; left: auto; }
+  .person-eight { right: 0; top: 160px; left: auto; }
 
   .story-grid,
   .story-grid-bottom,
@@ -762,6 +808,10 @@ blockquote p {
 
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-purple {
+    display: none;
   }
 }
 

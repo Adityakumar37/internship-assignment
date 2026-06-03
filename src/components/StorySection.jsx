@@ -24,6 +24,7 @@ export default function StorySection() {
         <div className="image-orbit orbit-bottom">
           <span className="coral-triangle triangle-one" aria-hidden="true" />
           <span className="coral-triangle triangle-two" aria-hidden="true" />
+          <span className="coral-triangle triangle-three" aria-hidden="true" />
           <img src="/assets/meeting-2.jpg" alt="Team members working together at a laptop" />
         </div>
         <article className="story-copy story-copy-right">
