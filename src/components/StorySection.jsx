@@ -25,7 +25,7 @@ export default function StorySection() {
           <span className="coral-triangle triangle-one" aria-hidden="true" />
           <span className="coral-triangle triangle-two" aria-hidden="true" />
           <span className="coral-triangle triangle-three" aria-hidden="true" />
-          <img src="/assets/meeting-2.jpg" alt="Team members working together at a laptop" />
+          <img src="/assets/figma-people/3ddf828267cb844171aaad94b1f6da3e7949acbd%20(2).png" alt="Team members working together at a laptop" />
         </div>
         <article className="story-copy story-copy-right">
           <h2>

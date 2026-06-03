@@ -28,6 +28,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -524,7 +525,6 @@ mark {
 }
 
 .testimonial-section {
-  overflow: hidden;
   padding: 90px 0 150px;
 }
 

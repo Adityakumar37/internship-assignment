@@ -5,7 +5,7 @@ const floatingFaces = [
   ['testimonial-face-4.jpg', 'float-face face-d'],
   ['testimonial-face-5.jpg', 'float-face face-e'],
   ['testimonial-face-6.jpg', 'float-face face-f'],
-  ['testimonial-face-7.jpg', 'float-face face-g'],
+  ['person-6.jpg', 'float-face face-g'],
 ];
 
 export default function Testimonials() {

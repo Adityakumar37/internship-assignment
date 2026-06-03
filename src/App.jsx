@@ -6,8 +6,18 @@ import Testimonials from './components/Testimonials.jsx';
 import NewsletterFooter from './components/NewsletterFooter.jsx';
 import useScrollReveal from './useScrollReveal.js';
 
+import { useEffect } from 'react';
+
 export default function App() {
+  useEffect(() => {
+    // Ensure we always start at the top and on the root path
+    window.scrollTo(0, 0);
+    if (window.location.pathname !== '/') {
+      window.history.replaceState(null, '', '/');
+    }
+  }, []);
   useScrollReveal();
+
 
   return (
     <>
