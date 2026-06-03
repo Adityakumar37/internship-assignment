@@ -22,13 +22,15 @@ export default function App() {
   return (
     <>
       <Header />
-      <main>
-        <HeroSection />
-        <StorySection />
-        <OfferSection />
-        <Testimonials />
-      </main>
-      <NewsletterFooter />
+      <div className="main-wrapper">
+        <main>
+          <HeroSection />
+          <StorySection />
+          <OfferSection />
+          <Testimonials />
+        </main>
+        <NewsletterFooter />
+      </div>
     </>
   );
 }
